@@ -1,0 +1,5 @@
+*.zip filter=lfs diff=lfs merge=lfs -text
+Assets/CPAS/3D/school[[:space:]]build[[:space:]]V5.9.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/CPAS/3D/school[[:space:]]build[[:space:]]V6.0.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/UI/BaseProject/HDB/HDBConnected.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/HDB/BaseProject/HDB/HDBConnected.fbx filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7166189957802200664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7166189957802200662}
+  - component: {fileID: 7166189957802200663}
+  m_Layer: 0
+  m_Name: GameplayHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7166189957802200662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166189957802200664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -84.94731, y: -120.92675, z: 6186.2583}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7166189957802200663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166189957802200664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96550a4d9201e334ca6255526a6c3f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - levelName: GameLevel
+    PlayerPos: {fileID: 0}
+    LevelHandler: {fileID: 0}
+    TaskDescription:
+    - 'Go to the lift '
+    - 'Press the lift button  '
+    - 'Enter the lift '
+    - 'Press your floor '
+    - 'Exit the lift '
+    - 'Go home '
+    - 'Wash your hands in the kitchen '
+    - 'Take a snack from the fridge '
+    - 'Put snack on the dining table '
+    - 'Take cutleries from the kitchen drawer '
+    - 'Park at the dining table to have your snack '
+    - Wash The Dish And Hands At The Sink
+    - Take Clothes From The Cupboard
+    - Go to the Toilet
+    - Put Your Clothes In The Laundary Basket
+    - Watch TV
+  Player: {fileID: 0}
+  PlayerCanvas: {fileID: 0}
+  TaskNo: 0
+  TaskDescriptionText: {fileID: 0}
