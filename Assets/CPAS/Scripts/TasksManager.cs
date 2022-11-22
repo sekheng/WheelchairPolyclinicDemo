@@ -8,6 +8,7 @@ public class TasksManager : MonoBehaviour
     public Task[] tasks;
     public Text tasksHints;
     public Transform Player;
+    public GameObject[] arrows;
     private int currentTask=0;
 
     private void Start()

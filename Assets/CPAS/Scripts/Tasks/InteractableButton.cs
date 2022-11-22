@@ -11,18 +11,38 @@ public class InteractableButton : MonoBehaviour
 
     public UnityEvent actionOnButtonTap;
 
-    public KeyCode key = KeyCode.Keypad1;
-    public KeyCode altKey = KeyCode.Alpha1;
+    public ButtonType buttonType = ButtonType.BLUE;
 
     private void Update()
     {
-        if (Input.GetKeyUp(key) || Input.GetKeyUp(altKey))
+        if (buttonType == ButtonType.BLUE)
         {
-            actionOnButtonTap.Invoke();
-            if (shouldCompleteTask)
+            if (Input.GetKeyUp(KeyCode.Alpha1) || Input.GetKeyUp(KeyCode.Alpha3) ||
+            Input.GetKeyUp(KeyCode.Keypad1) || Input.GetKeyUp(KeyCode.Keypad3))
             {
-                manager.UpdateTask(taskNo);
+                actionOnButtonTap.Invoke();
+                if (shouldCompleteTask)
+                {
+                    manager.UpdateTask(taskNo);
+                }
+            }
+        }
+        else if (buttonType == ButtonType.RED)
+        {
+            if (Input.GetKeyUp(KeyCode.Keypad2) || Input.GetKeyUp(KeyCode.Alpha2))
+            {
+                actionOnButtonTap.Invoke();
+                if (shouldCompleteTask)
+                {
+                    manager.UpdateTask(taskNo);
+                }
             }
         }
     }
+}
+
+public enum ButtonType
+{
+    BLUE,
+    RED
 }
