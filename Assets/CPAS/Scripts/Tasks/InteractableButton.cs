@@ -17,8 +17,7 @@ public class InteractableButton : MonoBehaviour
     {
         if (buttonType == ButtonType.BLUE)
         {
-            if (Input.GetKeyUp(KeyCode.Alpha1) || Input.GetKeyUp(KeyCode.Alpha3) ||
-            Input.GetKeyUp(KeyCode.Keypad1) || Input.GetKeyUp(KeyCode.Keypad3))
+            if (Input.GetKeyUp(KeyCode.Alpha1) || Input.GetKeyUp(KeyCode.Keypad1))
             {
                 actionOnButtonTap.Invoke();
                 if (shouldCompleteTask)
@@ -29,7 +28,8 @@ public class InteractableButton : MonoBehaviour
         }
         else if (buttonType == ButtonType.RED)
         {
-            if (Input.GetKeyUp(KeyCode.Keypad2) || Input.GetKeyUp(KeyCode.Alpha2))
+            if (Input.GetKeyUp(KeyCode.Keypad2) || Input.GetKeyUp(KeyCode.Alpha2) || 
+                Input.GetKeyUp(KeyCode.Alpha3) || Input.GetKeyUp(KeyCode.Keypad3))
             {
                 actionOnButtonTap.Invoke();
                 if (shouldCompleteTask)
