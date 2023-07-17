@@ -7,6 +7,10 @@ TagManager:
   - People
   - Wall
   - Floor
+  - Door
+  - Chair
+  - Table
+  - Task
   layers:
   - Default
   - TransparentFX
