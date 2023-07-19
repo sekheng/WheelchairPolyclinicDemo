@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
-    public static int MoveSpeed;
-    public static int RotateSpeed;
+    static Controls instance;
+    public static Controls Instance
+    {
+        get { return instance; }
+    }
+    public float MoveSpeed = 2;
+    public float RotateSpeed = 0.5f;
     // Start is called before the first frame update
     void Awake()
     {
-        MoveSpeed = 4;
-        RotateSpeed = 1;
+        if (instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        //MoveSpeed = 2;
+        //RotateSpeed = 1;
+        //PlayerPrefs.SetInt("MoveSpeed", MoveSpeed);
+        //PlayerPrefs.SetInt("RotateSpeed", RotateSpeed);
     }
 }

@@ -22,16 +22,16 @@ public class PlaySoundOnCollide : MonoBehaviour
             int isSame = tag.CompareTo(other.gameObject.tag);
             if (isSame == 0)
             {
-                    if (isIncludeFlag)
+                if (isIncludeFlag)
+                {
+                    if (!SFX.isPlaying)
                     {
-                        if (!SFX.isPlaying)
-                        {
-                            SFX.Play();
-                        Debug.Log("play at: " + other.name);
-                        }
+                        SFX.Play();
+                    Debug.Log("play at: " + other.name);
                     }
-                    // this means the it is colliding with a gameobject that has this tag, just jump out of it
-                    return;
+                }
+                // this means the it is colliding with a gameobject that has this tag, just jump out of it
+                return;
             }
         }
         if (!SFX.isPlaying && !isIncludeFlag)

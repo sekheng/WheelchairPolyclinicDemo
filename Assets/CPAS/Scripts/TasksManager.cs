@@ -43,6 +43,8 @@ public class TasksManager : MonoBehaviour
                 {
                     tasks[i].taskObject.SetActive(false);
                 }
+                // change the text to be Completed
+                tasksHints.text = "Completed";
             }
         }
     }

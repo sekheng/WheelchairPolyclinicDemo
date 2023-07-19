@@ -37,9 +37,9 @@ public class ChairMovement : MonoBehaviour
 
         vMovement = characterController.transform.forward * zMove;
 
-        characterController.transform.Rotate(Vector3.up * xMove * Controls.RotateSpeed * (100f * Time.deltaTime));
+        characterController.transform.Rotate(Vector3.up * xMove * Controls.Instance.RotateSpeed * (100f * Time.deltaTime));
 
-        characterController.Move(vMovement * Controls.MoveSpeed * Time.deltaTime);
+        characterController.Move(vMovement * Controls.Instance.MoveSpeed * Time.deltaTime);
         characterController.Move(vVelocity);
     }
 }
