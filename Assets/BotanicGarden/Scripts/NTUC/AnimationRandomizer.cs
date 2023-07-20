@@ -7,6 +7,7 @@ public class AnimationRandomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animator>().Play("Default", -1, Random.Range(0.0f, 1.0f));
+        float timeRange = Random.Range(0f, 1f);
+        GetComponent<Animator>().Play(0, -1, timeRange);
     }
 }
