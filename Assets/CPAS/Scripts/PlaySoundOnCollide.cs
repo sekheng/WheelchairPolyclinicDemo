@@ -12,32 +12,41 @@ public class PlaySoundOnCollide : MonoBehaviour
 
     [SerializeField, Tooltip("False means if the collider's tag doesnt belong in the list, play sound effect. Vice versa")]
     bool isIncludeFlag = true;
-
+    [Tooltip("The flag to play sound effect for collision")]
+    public bool playSFXFlag = true;
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other);
-        foreach (var tag in tags)
+        if (playSFXFlag)
         {
-            int isSame = tag.CompareTo(other.gameObject.tag);
-            if (isSame == 0)
+            //Debug.Log(other);
+            foreach (var tag in tags)
             {
-                if (isIncludeFlag)
+                int isSame = tag.CompareTo(other.gameObject.tag);
+                if (isSame == 0)
                 {
-                    if (!SFX.isPlaying)
+                    if (isIncludeFlag)
                     {
-                        SFX.Play();
-                    Debug.Log("play at: " + other.name);
+                        if (!SFX.isPlaying)
+                        {
+                            SFX.Play();
+                            Debug.Log("play at: " + other.name);
+                        }
                     }
+                    // this means the it is colliding with a gameobject that has this tag, just jump out of it
+                    return;
                 }
-                // this means the it is colliding with a gameobject that has this tag, just jump out of it
-                return;
+            }
+            if (!SFX.isPlaying && !isIncludeFlag)
+            {
+                SFX.Play();
+                Debug.Log("play at: " + other.name);
             }
         }
-        if (!SFX.isPlaying && !isIncludeFlag)
-        {
-            SFX.Play();
-            Debug.Log("play at: " + other.name);
-        }
+    }
+
+    public void setFlag(bool flag)
+    {
+        playSFXFlag = flag;
     }
 }
