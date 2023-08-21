@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 949210513719744740}
   m_Layer: 0
   m_Name: cpas staff-male
-  m_TagString: Untagged
+  m_TagString: People
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
